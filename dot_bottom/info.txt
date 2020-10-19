@@ -1,4 +1,1 @@
 name=Dot Bottom
-author=figjaj
-link=https://twitch.tv/figjaj
-bgcolor=#000000 

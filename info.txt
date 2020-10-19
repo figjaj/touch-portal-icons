@@ -1,0 +1,3 @@
+author=figjaj
+link=https://github.com/figjaj
+bgcolor=#000000
