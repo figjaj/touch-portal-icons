@@ -1,0 +1,4 @@
+name=Border Indicator Bar 
+author=figjaj
+link=https://twitch.tv/figjaj
+bgcolor=#000000 
