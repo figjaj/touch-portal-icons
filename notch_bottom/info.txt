@@ -1,0 +1,4 @@
+name=Notch Bottom
+author=figjaj
+link=https://twitch.tv/figjaj
+bgcolor=#000000 
