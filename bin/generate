@@ -1,0 +1,75 @@
+#!/bin/zsh
+
+# generate - Generate an icon
+#
+# Usage : generate [options]
+#
+#   options :
+#    -b File to use as the icon base
+#    -g Geometry - Where to align the input image
+#            format : X and Y relative to 0,0 | +48+17 is 48 pixels to the right and 17 pixels down (0,0 is the top left corner)
+#    -o Output directory (will be created if it doesn't exist)
+#    -r Resize - Size to change the input file to when adding it to the base | Default is 160x160
+
+ERR_MSG="Script successful."
+
+# Trap errors & non-normal exit signals: 1/HUP, 2/INT, 3/QUIT, 15/TERM, ERR
+trap onExit 1 2 3 15 ERR
+
+# Define Error trapping function
+onExit() {
+    local EXIT_STATUS=${1:-$?} # Get the first parameter passed to the function or the most recent exit status
+    echo "Exiting with ${EXIT_STATUS} : ${ERR_MSG}"
+    exit "${EXIT_STATUS}"
+}
+
+
+# Parse the command line flags
+zparseopts -D -E -A opts \
+    b: \
+    g: \
+    o: \
+    r:
+
+# Define variables and default values
+_base=${opts[-b]:="./blank.png"}
+_resize=${opts[-r]:="160x160"}
+_geometry=${opts[-g]:="+48+17"}
+_out=${opts[-o]:="./out"}
+file="$1"
+
+
+# Look for imagemagick. Throw an error if not found.
+MAGICK=$(command -v magick) || {
+    ERR_MSG="ERROR : Could not find magick."
+    onExit 1
+}
+
+# If the base file doesn't exist, throw an error.
+[[ -f "${_base}" ]] || {
+    ERR_MSG="ERROR : Could not find the base file. '${_base}'"
+    onExit 1
+}
+
+# If the input file doesn't exist, throw an error.
+[[ -f "${file}" ]] || {
+    ERR_MSG="ERROR : Could not find the input file. '${file}'"
+    onExit 1
+}
+
+# If the output dir doesn't exist, create it.
+if [[ ! -d "$_out" ]]; then
+    mkdir -p "$_out"
+fi
+
+# Strip the path
+name=${file##*\/}
+
+# Remove the extension
+fname=${name%\.*}
+
+# Use imagemagick to add the input file into the blank. Resize the input file first, then output to out
+# /usr/local/bin/magick convert ${_process}/blank.png \( "$f" -resize '160x160' \) -gravity center -composite ${_process}/out/${fname}.png
+$MAGICK convert "${_base}" \( "$file" -resize "${_resize}" \) -geometry "${_geometry}" -composite "${_out}/${fname}.png"
+
+exit 0
