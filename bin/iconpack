@@ -1,0 +1,72 @@
+#!/bin/zsh
+
+# iconpack - Create an icon pack
+#
+# Usage : iconpack [options]
+#
+#   options :
+#    -n Name of the icon pack
+#    -i Input directory
+#    -o Output Directory | Defaults to current directory
+
+ERR_MSG="Script successful."
+
+# Consants used when generating info.txt
+_AUTHOR="figjaj"
+_BGCOLOR="#000000"
+_LINK="https://github.com/figjaj"
+
+# Trap errors & non-normal exit signals: 1/HUP, 2/INT, 3/QUIT, 15/TERM, ERR
+trap onExit 1 2 3 15 ERR
+
+# Define Error trapping function
+onExit() {
+    local EXIT_STATUS=${1:-$?} # Get the first parameter passed to the function or the most recent exit status
+    echo "Exiting with ${EXIT_STATUS} : ${ERR_MSG}"
+    exit "${EXIT_STATUS}"
+}
+
+# info <in> <name>
+info() {
+    local in="$1"
+    local name="$2"
+
+    {
+        echo "author=${_AUTHOR}"
+        echo "bgcolor=${_BGCOLOR}"
+        echo "link=${_LINK}"
+        echo "name=${name}"
+    } > "${in}"/info.txt
+}
+
+# Parse the command line flags
+zparseopts -D -E -A opts \
+    i: \
+    n: \
+    o:
+
+# Define variables and default values
+_in=${opts[-i]}
+_name=${opts[-n]:="Icon Pack"}
+_out=${opts[-o]:="tpi"}
+_tpi=${${_name// /_}:l}
+
+
+ZIP=$(command -v zip) || {
+    ERR_MSG="ERROR : Could not find zip."
+    onExit 1
+}
+
+# Fail if input dir doesn't exist
+[[ -d "${_in}" ]] || {
+    ERR_MSG="ERROR : Could not find the input directory. '${_in}'"
+    onExit 1
+}
+
+# If info.txt doesn't exist in the input dir, create it
+[[ -f "${_in}/info.txt" ]] || {
+    info "${_in}" "${_name}"
+}
+
+#$ZIP -v -j dot_bottom.tpi dot_bottom/*
+$ZIP -0 -v -j "${_out}"/${_tpi}.tpi "${_in}"/*.png "${_in}"/info.txt

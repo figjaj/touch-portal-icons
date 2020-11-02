@@ -1,1 +1,4 @@
+author=figjaj
+bgcolor=#000000
+link=https://github.com/figjaj
 name=Dot Bottom
