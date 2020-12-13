@@ -1,4 +1,4 @@
 author=figjaj
 bgcolor=#444444
 link=https://github.com/figjaj
-name=Dot Bottom
+name=figjaj Positioning
