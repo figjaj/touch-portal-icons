@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg50157"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   sodipodi:docname="headphones-game.svg">
+  <defs
+     id="defs50151" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="400"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="3008"
+     inkscape:window-height="1621"
+     inkscape:window-x="1792"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata50154">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       inkscape:label="headphones game"
+       id="g50138"
+       style="display:inline;opacity:1;stroke-width:0.73444"
+       transform="matrix(0.36025185,0,0,0.36025188,-169.3299,-217.90605)">
+      <path
+         id="path50072"
+         d="m 557.06783,383.07053 h -90.13567 c -5.53349,0 -10.01516,4.48167 -10.01516,10.01492 v 40.06038 c 0,5.53325 4.48167,10.01515 10.01516,10.01515 h 90.13567 c 5.53325,0 10.01516,-4.48167 10.01516,-10.01515 v -40.06038 c -2.4e-4,-5.53325 -4.48191,-10.01492 -10.01516,-10.01492 z m -50.07553,35.05269 h -15.02261 v 15.02261 h -10.01515 v -15.02261 h -15.02262 v -10.01516 h 15.02262 v -15.02261 h 10.01515 v 15.02261 h 15.02261 z m 22.53392,10.01515 c -4.15633,0 -7.5113,-3.35497 -7.5113,-7.51131 0,-4.15633 3.35497,-7.5113 7.5113,-7.5113 4.15634,0 7.51131,3.35497 7.51131,7.5113 0,4.15634 -3.35497,7.51131 -7.51131,7.51131 z m 20.03031,-15.02261 c -4.15634,0 -7.51131,-3.35498 -7.51131,-7.51131 0,-4.15634 3.35497,-7.51131 7.51131,-7.51131 4.15633,0 7.5113,3.35497 7.5113,7.51131 0,4.15633 -3.3552,7.51131 -7.5113,7.51131 z"
+         inkscape:label="gamepad"
+         style="stroke-width:0.734439" />
+      <path
+         id="path39272"
+         d="m 511.99999,296.40663 c -77.30946,0 -139.15702,61.84756 -139.15702,139.15702 V 543.7969 c 0,26.28521 20.10046,46.38567 46.38567,46.38567 h 46.38568 V 466.48744 h -61.84756 v -30.92379 c 0,-60.30138 47.93185,-108.23323 108.23323,-108.23323 60.30138,0 108.23325,47.93185 108.23325,108.23323 v 30.92379 h -61.84758 v 123.69513 h 46.38568 c 26.28521,0 46.38568,-20.10046 46.38568,-46.38567 V 435.56365 c 0,-77.30946 -61.84757,-139.15702 -139.15703,-139.15702 z"
+         inkscape:label="headphones"
+         style="stroke-width:0.734442" />
+    </g>
+    <path
+       id="path51035"
+       d="m -169.56957,-338.00521 h -3.30729 v 14.88282 h -21.4974 v 3.30728 c 0,0.99219 0.66146,1.65365 1.65365,1.65365 h 18.1901 l 6.61459,6.61459 v -24.80469 c 0,-0.99219 -0.66146,-1.65365 -1.65365,-1.65365 z m -6.61458,9.92188 v -14.88282 c 0,-0.99218 -0.66146,-1.65364 -1.65365,-1.65364 h -21.49739 c -0.99219,0 -1.65365,0.66146 -1.65365,1.65364 v 23.15104 l 6.61458,-6.61458 h 16.53646 c 0.99219,0 1.65365,-0.66146 1.65365,-1.65364 z"
+       inkscape:label="chat"
+       style="display:inline;opacity:1;fill:#ffffff;fill-opacity:1;stroke-width:0.264583" />
+  </g>
+</svg>
