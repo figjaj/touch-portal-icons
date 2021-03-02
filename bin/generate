@@ -33,8 +33,8 @@ zparseopts -D -E -A opts \
 
 # Define variables and default values
 _base=${opts[-b]:="./blank.png"}
-_resize=${opts[-r]:="160x160"}
-_geometry=${opts[-g]:="+48+17"}
+_resize=${opts[-r]:="140x140"}
+_geometry=${opts[-g]:="+58+34"}
 _out=${opts[-o]:="./out"}
 file="$1"
 
